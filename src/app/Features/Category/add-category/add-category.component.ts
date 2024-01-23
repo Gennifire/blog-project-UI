@@ -19,6 +19,6 @@ export class AddCategoryComponent {
   }
 
   onFormSubmit() {
-
+    console.log(this.model);
   }
 }
