@@ -16,18 +16,20 @@ export class AddCategoryComponent {
 
   model: AddCategoryRequest;
 
-  constructor(private http: HttpClient) {
+  constructor(private categoryService: CategoryService) {
     this.model = {
       name: '',
       urlHandle: ''
     };
   }
 
-  onFormSubmit(model: AddCategoryRequest): Observable<void> {
-    return this.http.post<void>('https://localhost:7041/api/categories', model);
-
+  onFormSubmit() {
+    this.categoryService.addCategory(this.model).subscribe({
+      next: (response) => {
+        console.log("success!!");
+      }
+    })
   }
-
 
 }
 
