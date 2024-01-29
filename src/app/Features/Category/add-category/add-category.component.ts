@@ -28,3 +28,5 @@ export class AddCategoryComponent {
       })
   }
 }
+
+console.log("add-category ts");
