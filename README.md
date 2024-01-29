@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## Manual Console Test
+
+Test 1: console.log in nav bar root ts - Test Passed
+test 2: console.log in app root test - Test passed.
+Test 3: console.log in main ts - Test Passed.
+Test 4: console.log in category list ts - test failed
+Test 5: console.log in add-category component ts - Test failed
+Test 6: console.log in app-component ts - Test passed
