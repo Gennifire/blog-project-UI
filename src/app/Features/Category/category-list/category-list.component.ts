@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class CategoryListComponent {
 
 }
+
+console.log("category-list ts test.");
