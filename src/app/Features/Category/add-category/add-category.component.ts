@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AddCategoryRequest } from '../Models/add-category-request.model';
 import { CategoryService } from '../Services/category.service';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-category',
@@ -8,25 +10,25 @@ import { CategoryService } from '../Services/category.service';
   styleUrls: ['./add-category.component.css']
 })
 
+
 export class AddCategoryComponent {
+
 
   model: AddCategoryRequest;
 
-  constructor(private categoryService: CategoryService) {
+  constructor(private http: HttpClient) {
     this.model = {
       name: '',
       urlHandle: ''
     };
   }
 
-  onFormSubmit() {
-    this.categoryService.addCategory(this.model)
-      .subscribe({
-        next: (response) => {
-          console.log('Success!!');
-        }
-      })
+  onFormSubmit(model: AddCategoryRequest): Observable<void> {
+    return this.http.post<void>('https://localhost:7041/api/categories', model);
+
   }
+
+
 }
 
 console.log("Test add-category ts");
