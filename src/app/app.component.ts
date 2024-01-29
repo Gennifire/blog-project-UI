@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'blog-project';
 }
+
+console.log("app-component test");
