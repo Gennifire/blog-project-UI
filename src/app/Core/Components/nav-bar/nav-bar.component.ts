@@ -10,4 +10,4 @@ import { Component } from '@angular/core';
 export class NavBarComponent {
 
 }
-console.log("Test");
+console.log("Nav root Test");
