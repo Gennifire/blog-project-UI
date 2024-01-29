@@ -29,4 +29,4 @@ export class AddCategoryComponent {
   }
 }
 
-console.log("add-category ts");
+console.log("Test add-category ts");

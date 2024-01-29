@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'admin/categories/add',
     component: AddCategoryComponent
-  }
+  },
+  // {
+  // path: 'admin/categories/list',
+  //  component: CategoryListComponent
+  // }
 ];
 
 @NgModule({
