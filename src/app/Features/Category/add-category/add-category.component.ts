@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { AddCategoryRequest } from '../Models/add-category-request.model';
 import { CategoryService } from '../Services/category.service';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-category',
@@ -11,10 +10,11 @@ import { HttpClient } from '@angular/common/http';
 })
 
 
-export class AddCategoryComponent {
-
+export class AddCategoryComponent implements OnDestroy {
 
   model: AddCategoryRequest;
+
+  private addCategorySubscription?: Subscription
 
   constructor(private categoryService: CategoryService) {
     this.model = {
@@ -23,14 +23,20 @@ export class AddCategoryComponent {
     };
   }
 
+
+  //on submit - subscribe to observable
   onFormSubmit() {
-    this.categoryService.addCategory(this.model).subscribe({
-      next: (response) => {
-        console.log("success!!");
-      }
-    })
+    this.addCategorySubscription = this.categoryService.addCategory(this.model)
+      .subscribe({
+        next: (response) => {
+          console.log("success!!");
+        }
+      })
   }
 
+  //prevent memory leaks, unsub on destroy
+  ngOnDestroy(): void {
+    this.addCategorySubscription?.unsubscribe();
+  }
 }
 
-console.log("Test add-category ts");
