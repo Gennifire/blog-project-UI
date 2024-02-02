@@ -37,6 +37,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Test 5: console.log in add-category component ts - test failed
 - Test 6: console.log in app-component ts - Test passed
 
+
   ## Manual Console Test
 
 - Test 1: console.log in nav bar root ts - Test Passed
