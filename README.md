@@ -48,4 +48,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Test 6: console.log in app-component ts - Test passed
   - It was a missing semi colon >:(
  
-  ## Manual Test template
+  ## Manual Test
