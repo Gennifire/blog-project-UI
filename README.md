@@ -47,3 +47,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Test 5: console.log in add-category component ts - test Passed
 - Test 6: console.log in app-component ts - Test passed
   - It was a missing semi colon >:(
+ 
+  ## Manual Test template
