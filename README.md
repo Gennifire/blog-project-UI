@@ -49,6 +49,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - It was a missing semi colon >:(
  
   ## Manual Test
-ADDED NEW LINE
+
 
 
