@@ -15,7 +15,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
 
   id: string | null = null;
   paramsSubscription?: Subscription;
-  category?: Category;
+  Category?: Category;
 
 
   constructor(private route: ActivatedRoute,
@@ -32,7 +32,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
           //get data from API
           this.categoryService.getCatergoryById(this.id).subscribe({
             next: (response) => {
-              this.category = response;
+              this.Category = response;
             }
           });
         }
@@ -41,7 +41,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
   }
 
   onFormSubmit(): void {
-    console.log(this.category);
+    console.log(this.Category);
   }
 
   ngOnDestroy(): void {
