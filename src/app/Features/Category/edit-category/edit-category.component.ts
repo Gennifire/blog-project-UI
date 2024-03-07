@@ -16,7 +16,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
   id: string | null = null;
   paramsSubscription?: Subscription;
   category?: Category;
-  notFound: TemplateRef<NgIfContext<Category | undefined>> | null;
+
 
   constructor(private route: ActivatedRoute,
     private categoryService: CategoryService) {
