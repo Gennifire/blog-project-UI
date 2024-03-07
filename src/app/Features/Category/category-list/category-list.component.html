@@ -17,12 +17,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let catgory of categories">
-                    <td>{{catgory.id}}</td>
-                    <td>{{catgory.name}}</td>
-                    <td>{{catgory.urlHandle}}</td>
+                <tr *ngFor="let category of categories">
+                    <td>{{category.id}}</td>
+                    <td>{{category.name}}</td>
+                    <td>{{category.urlHandle}}</td>
                     <td>
-                        <a class="btn btn-light" [routerLink]="['admin/categories', catgory.id]">Edit</a>
+                        <a class="btn btn-light" [routerLink]="['admin/categories', category.id]">Edit</a>
                     </td>
                 </tr>
 
