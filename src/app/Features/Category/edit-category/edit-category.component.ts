@@ -18,7 +18,6 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
 
   }
 
-
   ngOnInit(): void {
     this.paramsSubscription = this.route.paramMap.subscribe({
       next: (params) => {
