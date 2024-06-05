@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category } from '../Models/category.model';
 import { CategoryService } from '../Services/category.service';
+import { UpdateCategoryRequest } from '../Models/update-category-request.model';
 
 @Component({
   selector: 'app-edit-category',
@@ -42,6 +43,11 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
 
   onFormSubmit(): void {
     console.log(this.Category);
+    const updateCategoryRequest: UpdateCategoryRequest = {
+      name: this.Category?.name ?? '',
+      urlHandle: this.Category?.name ?? ''
+    };
+
   }
 
   ngOnDestroy(): void {
