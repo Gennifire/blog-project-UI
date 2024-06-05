@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category } from '../Models/category.model';
 import { CategoryService } from '../Services/category.service';
 import { UpdateCategoryRequest } from '../Models/update-category-request.model';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -42,7 +43,6 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
       }
     });
   }
-
 
   onFormSubmit(): void {
     console.log(this.Category);
